@@ -10,5 +10,10 @@
  * 4.if refresh is invalid then log out the user.
  * 
  * 
+ * 1.JWT--Json Web Token
+ * 2.generate a token by using jwt.sign
+ * 3.create api set to cookie.httpOnly,secure,sameSite
+ * 4.from client side:axios withCredentials:true
+ * 5.cors setup origin and credentials:true
  * 
  * **/
