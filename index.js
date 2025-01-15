@@ -8,14 +8,18 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 // middleware
-app.use(cors(
-    {
-        origin: [
-            'http://localhost:5173'
-        ],
-        credentials: true
-    }
-));
+
+app.use(cors({
+    origin: [
+        'http://localhost:5000/',
+
+        'https://cars-doctor-689b3.web.app',
+        'https://cars-doctor-689b3.firebaseapp.com'
+    ],
+    credentials: true
+}));
+
+
 app.use(express.json());
 app.use(cookieParser());
 
@@ -92,6 +96,8 @@ async function run() {
             const result = await cursor.toArray();
             res.send(result);
         })
+
+
 
         app.get('/services/:id', async (req, res) => {
             const id = req.params.id;
