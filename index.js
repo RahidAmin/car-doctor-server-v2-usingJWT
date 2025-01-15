@@ -15,7 +15,8 @@ app.use(cors({
     origin: [
         'http://localhost:5173',
         'https://cars-doctor-689b3.web.app',
-        'https://cars-doctor-689b3.firebaseapp.com'
+        'https://cars-doctor-689b3.firebaseapp.com',
+        'https://golden-sorbet-26e58f.netlify.app'
     ],
     credentials: true
 }));
